@@ -1,4 +1,5 @@
-// Credit to Kaushal Addanki for code
+// Credit to Kaushal Addanki for original code
+// Note: This code works for Text Type > Single Line
 
 Qualtrics.SurveyEngine.addOnload(function()
 {

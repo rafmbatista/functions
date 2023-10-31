@@ -1,0 +1,27 @@
+// This code should be copied directly into the Javascript in Qualtrics for 'text edit' questions where you don't want people to be able to copy and paste. 
+// If the user tries to paste, a notification appears to tell them 'Pasting is not allowed in this field.'
+
+Qualtrics.SurveyEngine.addOnload(function()
+{
+	/*Place your JavaScript here to run when the page loads*/
+
+});
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+    // Select all input fields of type 'text' within the survey
+    var textFields = document.querySelectorAll('input[type="text"]');
+
+    // Add event listener to each text field to prevent pasting
+    textFields.forEach(function(input) {
+        input.addEventListener('paste', function(e) {
+            e.preventDefault();
+            alert('Pasting is not allowed in this field.');
+        });
+    });
+});
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+	/*Place your JavaScript here to run when the page is unloaded*/
+
+});

@@ -1,3 +1,5 @@
+// Credit to Kaushal Addanki for code
+
 Qualtrics.SurveyEngine.addOnload(function()
 {
 	/*Place your JavaScript here to run when the page loads*/

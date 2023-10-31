@@ -1,20 +1,32 @@
-// Credit to Kaushal Addanki for original code
-// Note: This code works for Text Type > Single Line
+// Credit to Jiabi Wang for idea; Kaushal Addanki for original code; Yena Kim and Laura Wallace for tips on fixes
+// Note: An earlier version only prevented *pasting* in "Single line" type responses. 
+// This code has been updated to prevent dragging and dropping of text and works with "Multiple Lines" and "Essay" type questions in Qualtrics
 
 Qualtrics.SurveyEngine.addOnload(function()
 {
 	/*Place your JavaScript here to run when the page loads*/
-	 //disable pasting
-  jQuery('input').on('paste', function(e) {
-    e.preventDefault();
-  });
 
 });
 
 Qualtrics.SurveyEngine.addOnReady(function()
 {
-	/*Place your JavaScript here to run when the page is fully displayed*/
+    // Target the first text input field within the current survey question
+    var textField = jQuery("#"+this.questionId+" .InputText:eq(0)");
 
+    // Prevent cut, copy, and paste
+    textField.on("cut copy paste", function(e) {
+        e.preventDefault();
+    });
+
+    // Prevent dragging text over the input field
+    textField.on("dragover", function(e) {
+        e.preventDefault();
+    });
+
+    // Prevent dropping text into the input field
+    textField.on("drop", function(e) {
+        e.preventDefault();
+    });
 });
 
 Qualtrics.SurveyEngine.addOnUnload(function()

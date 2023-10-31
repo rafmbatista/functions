@@ -1,5 +1,6 @@
 // This code should be copied directly into the Javascript in Qualtrics for 'text edit' questions where you don't want people to be able to copy and paste. 
 // If the user tries to paste, a notification appears to tell them 'Pasting is not allowed in this field.'
+// Credit to ChatGPT
 
 Qualtrics.SurveyEngine.addOnload(function()
 {

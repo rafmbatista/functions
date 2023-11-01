@@ -1,4 +1,4 @@
-// Credit to Jiabi Wang for idea; Kaushal Addanki for original code; Yena Kim and Laura Wallace for tips on fixes
+// Credit to Jiabi Wang for idea; Adam Vargas & Kaushal Addanki for original code; Yena Kim and Laura Wallace for tips on fixes
 // Note: An earlier version only prevented *pasting* in "Single line" type responses. 
 // This code has been updated to prevent dragging and dropping of text and works with "Multiple Lines" and "Essay" type questions in Qualtrics
 
